@@ -81,6 +81,7 @@ SELECT users.id COUNT(*) from posts LEFT JOINT users on posts.user_id = users.id
 - alembic revision --autogenerate -m 'add vote table' (automatic adds the columns definition in migration file) this follows alembic heads to apply.
 29.4 After alembic tables which was created using orm, now they are going to create using alembic
 30. pip freeze > requirement.txt ... create requirement.txt at root level contains all the packages. and to install pip install -r requirement.txt
+31. Deploy the app using Heroku, Install Heroku and deploy the app (https://devcenter.heroku.com/articles/getting-started-with-python)
 
 
 
