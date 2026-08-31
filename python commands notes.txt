@@ -82,6 +82,12 @@ SELECT users.id COUNT(*) from posts LEFT JOINT users on posts.user_id = users.id
 29.4 After alembic tables which was created using orm, now they are going to create using alembic
 30. pip freeze > requirement.txt ... create requirement.txt at root level contains all the packages. and to install pip install -r requirement.txt
 31. Deploy the app using Heroku, Install Heroku and deploy the app (https://devcenter.heroku.com/articles/getting-started-with-python)
+32. digitalOcean(Cluade platform) is used to provide server(do ssh in cmd)
+33. do ssh in cmd, install necessarcy package like python and PostgreSQL
+**34 - There are command to change user in shell and 
+
+SOURCE - https://www.youtube.com/watch?v=0sOvCWFmrtA
+TIME_LINE_COMPLETED - 11:34:00
 
 
 
