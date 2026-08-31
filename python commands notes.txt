@@ -64,3 +64,23 @@ The main purpose of the Signature is therefore not to hide the Payload, but to p
 25. Composite key -> primary key that spans multiple columns (postid+userid)
 26. Join query
 SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id; (means every rows of post table and match user_id with rows or user table)
+27. We can get counts of records in SQL queries and group the things as well ->
+SELECT users.id COUNT(*) from posts LEFT JOINT users on posts.user_id = users.id GROUP BY users.id
+28. Alembic use for the migration and incremental changes. 
+29. alembic --help -> alembic init <folderName> then env.py inside the alembic folder configure the db url and models.(This command usefull for all the functions required for migration)
+29.1 alembic revision -m <migration file name> user to create migration file.
+29.2 write the migrations like op.create table also write drop table thing( file has two things upgrade and downgrade functions.
+29.3 Commands
+- alembic init <foldername>
+- alembic revision -m <migrationfilename>
+- alembic --help
+- alembic current (gives current migration applied)
+- alembic revision --help
+- alembic upgrade --help
+- alembic heads (give latest migration created)
+- alembic revision --autogenerate -m 'add vote table' (automatic adds the columns definition in migration file) this follows alembic heads to apply.
+29.4 After alembic tables which was created using orm, now they are going to create using alembic
+30. pip freeze > requirement.txt ... create requirement.txt at root level contains all the packages. and to install pip install -r requirement.txt
+
+
+
